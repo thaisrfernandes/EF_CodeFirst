@@ -9,7 +9,6 @@ namespace ExercicioEFCoreCodeFirst.PL
         public int ActorId { get; set; }
         public DateTime DateBirth { get; set; }
         public String Name { get; set; }
-        public ICollection<Movie> Movies { get; set; }
         public ICollection<ActorMovie> Characters { get; set; }
     }
 }

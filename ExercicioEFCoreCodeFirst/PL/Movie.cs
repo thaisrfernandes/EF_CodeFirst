@@ -16,5 +16,6 @@ namespace ExercicioEFCoreCodeFirst.PL
         public int GenreID { get; set; }
         public Genre Genre { get; set; }
         public ICollection<Actor> Actors { get; set; }
+        public ICollection<ActorMovie> Characters { get; set; }
     }
 }
