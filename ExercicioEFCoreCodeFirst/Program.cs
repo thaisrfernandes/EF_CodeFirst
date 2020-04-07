@@ -25,48 +25,46 @@ namespace ExercicioEFCoreCodeFirst
 
                 MovieContext context = new MovieContext();
 
-                //Consulta 1
-                var query1 = from c in context.Characters
+                //Consulta 1 - Listar elenco de um filme.
+                var StarWarsCast = from c in context.Characters
                              where c.Movie.Title == "Star Wars"
                              select c.Actor.Name;
 
                 Console.WriteLine(" ");
-                Console.WriteLine("Listar elenco de um filme");
-                foreach (String titulo in query1)
+                Console.WriteLine("Elenco de Star Wars: ");
+                foreach (String actorName in StarWarsCast)
                 {
-                    Console.WriteLine(titulo);
+                    Console.WriteLine(actorName);
                 }
 
-
-                //Consulta 2
-                var query2 = (from c in context.Characters
-                             where c.Character == "James Bond"
-                             select c.Actor.Name).Distinct();
+                //Consulta 2 - Listar todos os atores que já desempenharam um determinado personagem.
+                var jamesBondActors = (from c in context.Characters
+                              where c.Character == "James Bond"
+                              select c.Actor.Name).Distinct();
 
                 Console.WriteLine(" ");
-                Console.WriteLine("Listar todos os atores que já desempenharam um determinado personagem.");
-                foreach (String titulo in query2)
+                Console.WriteLine("Atores que viveram James Bond: ");
+                foreach (String actorName in jamesBondActors)
                 {
-                    Console.WriteLine(titulo);
+                    Console.WriteLine(actorName);
                 }
 
-
-                //Consulta 3
-                var query3 = from c in context.Characters
-                             where c.Character == "James Bond"
-                             group c by c.Actor.Name into ActorInCharacter
-                             select 
-
-               Console.WriteLine(query3);
+                //Consulta 3 - Informar qual o ator desempenhou mais vezes um determinado personagem.
+                var mostActedAsJamesBond = (from c in context.Characters
+                              where c.Character == "James Bond"
+                              group c by c.Actor.Name into ActorAsCharacter
+                              orderby ActorAsCharacter.Count() descending
+                              select ActorAsCharacter.Key).First();
 
                 Console.WriteLine(" ");
-                Console.WriteLine("Informar qual o ator desempenhou mais vezes um determinado personagem.");
+                Console.WriteLine("O ator que mais atuou como James Bond foi: ");
+                Console.WriteLine(mostActedAsJamesBond);
 
-                foreach (var titulo in query3)
-                {
-                    Console.WriteLine(titulo);
-                }
 
+               //Só faltam as consultas opcionais, prof nao limitou nenhuma quantidade.
+               //Abaixo exemplos do prof:
+
+                //--------------------------------------------------------------------------
 
                 // filmes do diretor “Quentin Tarantino”
                 //var query1 = from f in context.Movies
