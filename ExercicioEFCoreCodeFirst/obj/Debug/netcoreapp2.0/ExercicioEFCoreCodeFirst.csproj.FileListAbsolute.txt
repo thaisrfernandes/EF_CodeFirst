@@ -33,3 +33,15 @@ C:\Users\Thaís_2\Desktop\PSA\ExercicioEFCoreCodeFirst\ExercicioEFCoreCodeFirst\
 C:\Users\Thaís_2\Desktop\PSA\ExercicioEFCoreCodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.dll
 C:\Users\Thaís_2\Desktop\PSA\ExercicioEFCoreCodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.pdb
 C:\Users\Thaís_2\Desktop\PSA\ExercicioEFCoreCodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.genruntimeconfig.cache
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\bin\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.deps.json
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\bin\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.runtimeconfig.json
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\bin\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.runtimeconfig.dev.json
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\bin\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.dll
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\bin\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.pdb
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.csprojAssemblyReference.cache
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.AssemblyInfoInputs.cache
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.AssemblyInfo.cs
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.dll
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.pdb
+C:\Users\Thaís_2\Desktop\PSA\EF_CodeFirst\ExercicioEFCoreCodeFirst\obj\Debug\netcoreapp2.0\ExercicioEFCoreCodeFirst.genruntimeconfig.cache

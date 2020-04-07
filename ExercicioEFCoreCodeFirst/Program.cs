@@ -25,123 +25,160 @@ namespace ExercicioEFCoreCodeFirst
 
                 MovieContext context = new MovieContext();
 
-                // filmes do diretor “Quentin Tarantino”
-                var query1 = from f in context.Movies
-                             where f.Director == "Quentin Tarantino"
-                             select f;
+                //Consulta 1
+                var query1 = from c in context.Characters
+                             where c.Movie.Title == "Star Wars"
+                             select c.Actor.Name;
 
-                var query2 = from f in context.Movies
-                             where f.Director == "Quentin Tarantino"
-                             select f.Title;
+                Console.WriteLine(" ");
+                Console.WriteLine("Listar elenco de um filme");
+                foreach (String titulo in query1)
+                {
+                    Console.WriteLine(titulo);
+                }
 
-                var query3 = context.Movies
-                                      .Where(f => f.Director == "Quentin Tarantino")
-                                      .Select(f => f.Title);
 
-                Console.WriteLine("Filmes do diretor Quentin Tarantino");
+                //Consulta 2
+                var query2 = (from c in context.Characters
+                             where c.Character == "James Bond"
+                             select c.Actor.Name).Distinct();
+
+                Console.WriteLine(" ");
+                Console.WriteLine("Listar todos os atores que já desempenharam um determinado personagem.");
                 foreach (String titulo in query2)
                 {
                     Console.WriteLine(titulo);
                 }
 
+
+                //Consulta 3
+                var query3 = from c in context.Characters
+                             where c.Character == "James Bond"
+                             group c by c.Actor.Name into ActorInCharacter
+                             select 
+
+               Console.WriteLine(query3);
+
+                Console.WriteLine(" ");
+                Console.WriteLine("Informar qual o ator desempenhou mais vezes um determinado personagem.");
+
+                foreach (var titulo in query3)
+                {
+                    Console.WriteLine(titulo);
+                }
+
+
+                // filmes do diretor “Quentin Tarantino”
+                //var query1 = from f in context.Movies
+                //             where f.Director == "Quentin Tarantino"
+                //             select f;
+
+                //var query2 = from f in context.Movies
+                //             where f.Director == "Quentin Tarantino"
+                //             select f.Title;
+
+                //var query3 = context.Movies
+                //                      .Where(f => f.Director == "Quentin Tarantino")
+                //                      .Select(f => f.Title);
+
+                //Console.WriteLine("Filmes do diretor Quentin Tarantino");
+                //foreach (String titulo in query2)
+                //{
+                //    Console.WriteLine(titulo);
+                //}
+
                 //todos os filmes do genero "Action"
-                Console.WriteLine("\nFilmes de ação");
-                var query4 = (from genero in context.Genres
-                                                   .Include("Movies")
-                              where genero.Name == "Action"
-                              select genero).First();
+                //Console.WriteLine("\nFilmes de ação");
+                //var query4 = (from genero in context.Genres
+                //                                   .Include("Movies")
+                //              where genero.Name == "Action"
+                //              select genero).First();
 
-                foreach (var filme in query4.Movies)
-                {
-                    Console.WriteLine("\t" + filme.Title);
-                }
+                //foreach (var filme in query4.Movies)
+                //{
+                //    Console.WriteLine("\t" + filme.Title);
+                //}
 
-                var query4b = (from filme in context.Movies
-                               where filme.Genre.Name == "Action"
-                               select filme);
+                //var query4b = (from filme in context.Movies
+                //               where filme.Genre.Name == "Action"
+                //               select filme);
 
-                foreach (var filme in query4b)
-                {
-                    Console.WriteLine("\t" + filme.Title);
-                }
+                //foreach (var filme in query4b)
+                //{
+                //    Console.WriteLine("\t" + filme.Title);
+                //}
 
 
 
 
                 //projeção sobre o título e dada de lançamento dos
                 //filmes do diretor “Quentin Tarantino” 
-                var query5 = from f in context.Movies
-                             where f.Director == "Quentin Tarantino"
-                             select new { Titulo = f.Title, f.ReleaseDate };
+                //var query5 = from f in context.Movies
+                //             where f.Director == "Quentin Tarantino"
+                //             select new { Titulo = f.Title, f.ReleaseDate };
 
-                foreach (var filme in query5)
-                {
-                    Console.WriteLine("{0}\t {1}",
-                        filme.ReleaseDate.ToShortDateString(),
-                        filme.Titulo);
-                }
+                //foreach (var filme in query5)
+                //{
+                //    Console.WriteLine("{0}\t {1}",
+                //        filme.ReleaseDate.ToShortDateString(),
+                //        filme.Titulo);
+                //}
 
                 // Gêneros ordenados pelo nome
-                var query6 = from g in context.Genres
-                             orderby g.Name descending
-                             select g;
+                //var query6 = from g in context.Genres
+                //             orderby g.Name descending
+                //             select g;
 
-                foreach (var genero in query6)
-                {
-                    Console.WriteLine("{0}\t {1}", genero.Name, genero.Description);
-                }
+                //foreach (var genero in query6)
+                //{
+                //    Console.WriteLine("{0}\t {1}", genero.Name, genero.Description);
+                //}
 
                 //Filmes agrupados pelo ano de lançamento
-                var query7a = context.Movies.ToList();
-                var query7 = from f in query7a
-                             group f by f.ReleaseDate.Year;
+                //var query7a = context.Movies.ToList();
+                //var query7 = from f in query7a
+                //             group f by f.ReleaseDate.Year;
 
-                foreach (var ano in query7)
-                {
-                    Console.WriteLine("Ano: {0}", ano.Key);
-                    foreach (var filme in ano)
-                    {
-                        Console.WriteLine("\t{0:dd/MM}\t {1}",
-                                                 filme.ReleaseDate,
-                                                filme.Title);
-                    }
-                }
+                //foreach (var ano in query7)
+                //{
+                //    Console.WriteLine("Ano: {0}", ano.Key);
+                //    foreach (var filme in ano)
+                //    {
+                //        Console.WriteLine("\t{0:dd/MM}\t {1}",
+                //                                 filme.ReleaseDate,
+                //                                filme.Title);
+                //    }
+                //}
 
                 //Projeção do faturamento total, quantidade de filmes
                 //e avaliação média agrupadas por gênero
-                var query8a = context.Movies.ToList();
-                var query8 = from f in query8a
-                             group f by f.Genre.Name into grpGen
-                             select new
-                             {
-                                 Categoria = grpGen.Key,
-                                 Filmes = grpGen,
-                                 Faturamento = grpGen.Sum(e => e.Gross),
-                                 Avaliacao = grpGen.Average(e => e.Rating),
-                                 Quantidade = grpGen.Count()
-                             };
+                //var query8a = context.Movies.ToList();
+                //var query8 = from f in query8a
+                //             group f by f.Genre.Name into grpGen
+                //             select new
+                //             {
+                //                 Categoria = grpGen.Key,
+                //                 Filmes = grpGen,
+                //                 Faturamento = grpGen.Sum(e => e.Gross),
+                //                 Avaliacao = grpGen.Average(e => e.Rating),
+                //                 Quantidade = grpGen.Count()
+                //             };
 
-                foreach (var genero in query8)
-                {
-                    Console.WriteLine("\nGenero: {0}", genero.Categoria);
-                    Console.WriteLine("\tFaturamento total: {0}\n\t Avaliação média: {1}\n\tNumero de filmes: {2}",
-                                        genero.Faturamento, genero.Avaliacao, genero.Quantidade);
-                    Console.WriteLine("Filmes: ");
-                    foreach (var m in genero.Filmes)
-                    {
-                        Console.WriteLine("\t{0}", m.Title);
-                    }
-                }
+                //foreach (var genero in query8)
+                //{
+                //    Console.WriteLine("\nGenero: {0}", genero.Categoria);
+                //    Console.WriteLine("\tFaturamento total: {0}\n\t Avaliação média: {1}\n\tNumero de filmes: {2}",
+                //                        genero.Faturamento, genero.Avaliacao, genero.Quantidade);
+                //    Console.WriteLine("Filmes: ");
+                //    foreach (var m in genero.Filmes)
+                //    {
+                //        Console.WriteLine("\t{0}", m.Title);
+                //    }
+                //}
                 Console.ReadKey();
                 #endregion
             }
         }
-
-
-
-
-
-
 
 
         private static void Seed(MovieContext context)

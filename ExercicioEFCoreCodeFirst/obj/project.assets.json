@@ -6624,11 +6624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thaís_2\\Desktop\\PSA\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
+      "projectUniqueName": "C:\\Users\\Thaís_2\\Desktop\\PSA\\EF_CodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
       "projectName": "ExercicioEFCoreCodeFirst",
-      "projectPath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
+      "projectPath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\EF_CodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
       "packagesPath": "C:\\Users\\Thaís_2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst\\obj\\",
+      "outputPath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\EF_CodeFirst\\ExercicioEFCoreCodeFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

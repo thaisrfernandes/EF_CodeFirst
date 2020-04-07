@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JLNYz2nMVg1HQH6mE2//yTN8gzlj5+7ZhKzEdZt5HYFGnzD118RQIgH4RkVD065/BY2AEiA3YCMEUf+pLedftw==",
+  "dgSpecHash": "Dq9WVwtTVc38jikNpgQX0nM4NggxBRzQeu5qLnD6s62mMSZdZ9J+bosnWSKRSHa2T6McqSy1gE03cM2qbAEzGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
+  "projectFilePath": "C:\\Users\\Thaís_2\\Desktop\\PSA\\EF_CodeFirst\\ExercicioEFCoreCodeFirst\\ExercicioEFCoreCodeFirst.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thaís_2\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Thaís_2\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
